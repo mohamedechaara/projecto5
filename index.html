@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    section{
+        position: absolute;
+        width: 500px;
+        height: 500px;
+       
+        top: 200px;
+        border-radius: 30px;
+        box-shadow: 0 0 10px;
+    }
+    .header{
+        width: 500px;
+        height: 150px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        background-color: rgb(29, 143, 237);   
+    }
+    .ciycl{
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 80px;
+        left: 180px;
+        top: 45px;
+        background-color: rgb(29, 143, 237); 
+    }
+    img{
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width:140px ;
+        height: 140px;
+        border-radius: 80px;
+        border: 3px solid white;
+    }
+    .text{
+        position: absolute;
+        top: 210px;
+        left: -40PX;
+        line-height: 1.8;
+        animation: animat1 1s ease forwards;
+        opacity: 0;
+    }
+    .text h1{
+        font-size: 33px;
+       
+        
+    }
+    @keyframes animat1{
+        100%{
+            opacity: 0;
+            transform: translateX(0);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(100px);
+        }
+       
+    }
+    .text p{
+        position: absolute;
+        left: 150px;
+        color: rgb(110, 112, 112);
+    }
+    .icons{
+        display: flex;
+        position: absolute;
+        gap: 10px;
+        top: 300px;
+        left: 130px;
+        font-size: 50px;
+    }
+    .icons i{
+        opacity: 0;
+        transition: 1s;
+        animation: mohamed 1s ease-in-out forwards;
+        animation-delay: calc(.2s * var(--i));
+    }
+    .button{
+        position: absolute;
+        top: 360px;
+        left: 100px;
+        display: flex;
+        gap: 10px;
+    }
+    @keyframes mohamed{
+        0%{
+            opacity: 0;
+            transform: translateX(100px);        
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0px); 
+        }
+    }
+
+    .button button{
+        border-radius: 40px;
+        width: 140px;
+        height: 40px;
+        background-color: rgb(29, 143, 237); ;
+        color: white;
+        border: none;
+        animation: animate 1s ease forwards;   
+    }
+    @keyframes animate{
+        0%{
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    .button button:hover{
+        background-color: yellow;
+        color: black;
+        box-shadow: 0 0 10px;
+    }
+    .icon{
+        position: absolute;
+        display: flex;
+        gap: 70px;
+        top: 427px;
+        left: 110px;
+    }
+    .icon i{
+        font-size: 40px;
+    }
+    .parag
+    {
+        position: absolute;
+        display: flex;
+        gap: 90px;
+        top: 439px;
+        left: 150px;
+    }
+    
+    .icon i:hover{
+        animation:animat .1s ease forwards;
+    }
+    @keyframes animat{
+        0%{
+            opacity: 0;
+            transform: rotate(30deg);
+            transform: translateY(20px); 
+            
+        }
+        100%{
+            opacity: 1;
+            transform: rotate(30deg); 
+        }
+    }
+    
+    
+</style>
+<body>
+    <section>
+        <div class="header">
+            <div class="ciycl">
+                <img src="wanpes.jpg" >
+            </div>
+        </div>
+        <div class="text">
+            <h1>MOHAMED ECH-CHARA</h1>
+            <p>developper</p>
+        </div>
+        <div class="icons">
+            <i class='bx bxl-facebook-circle' style="--i:1 ;color: rgb(18, 92, 229);"></i>
+            <i class='bx bxl-youtube' style= "--i:2 ;color:#f70d0d"></i>
+            <i class='bx bxl-instagram-alt' style='--i:3 ;color:#e20fa1'  ></i>
+            <i class='bx bxl-whatsapp' style='--i:4 ;color:#147d14'  ></i>
+        </div>
+        <div class="button">
+            <button>Subscribe</button>
+            <button>Message</button>
+        </div>
+        <div class="icon">
+            <i class='bx bx-heart' id="header" style="color: re;" ></i>
+            <i class='bx bx-message-rounded'></i>
+            <i class='bx bx-share'></i>
+        </div>
+        <div class="parag">
+            <p>60k</p>
+            <p>30k</p>
+            <p>20k</p>
+        </div>
+    </section>
+</body>
+</html>
